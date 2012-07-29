@@ -1,0 +1,6 @@
+#!/bin/bash
+EXTERNAL_IP="curl http://automation.whatismyip.com/n09230945.asp"
+# write to file
+echo $EXTERNAL_IP > ~/.piaddress
+# scp roo mtrl
+scp ~/.piaddress root@mtrl.co.uk:/var/www/vhosts/mtrl.co.uk/httpdocs/pi
